@@ -1,0 +1,13 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+    xmlns:local="clr-namespace:QQMusicPlayer.Styles">
+
+
+    <LinearGradientBrush x:Key="rbbrush">
+        <GradientStop Color="#1FD4AF" Offset="0"></GradientStop>
+        <GradientStop Color="#1FD0A3" Offset="0.5"></GradientStop>
+        <GradientStop Color="#1ECC94" Offset="1"></GradientStop>
+    </LinearGradientBrush>
+</ResourceDictionary>

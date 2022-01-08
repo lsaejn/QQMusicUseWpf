@@ -6,3 +6,8 @@
 /.vs
 /QQMusicPlayer/PlayerControl/obj/Debug
 /QQMusicPlayer/QQMusicPlayer/obj/Debug
+/QQMusicPlayer/packages
+/QQMusicPlayer/PlayerControl/bin
+/QQMusicPlayer/PlayerControl/obj/Release
+/QQMusicPlayer/QQMusicPlayer/bin/Debug
+/QQMusicPlayer/QQMusicPlayer/obj/Release
