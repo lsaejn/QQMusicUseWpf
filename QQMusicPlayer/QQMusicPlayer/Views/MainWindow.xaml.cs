@@ -9,7 +9,8 @@ using MediaState = Gu.Wpf.Media.MediaState;
 
 namespace QQMusicPlayer.Views
 {
-
+    //.net core打包单文件时，程序路径居然在临时盘...马一下
+    //https://docs.microsoft.com/en-us/dotnet/desktop/wpf/app-development/pack-uris-in-wpf?redirectedfrom=MSDN&view=netframeworkdesktop-4.8#Resource_File_Pack_URIs___Local_Assembly
     public partial class MainWindow : Window
     {
 
