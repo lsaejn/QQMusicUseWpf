@@ -43,12 +43,12 @@
                 <ControlTemplate TargetType="{x:Type local:NaviButton}" x:Name="x">
                     <Border x:Name="border" CornerRadius="3" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"
                             Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
-                        <Grid HorizontalAlignment="Left" >
+                        <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="20"></ColumnDefinition>
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                                 <ColumnDefinition Width="*"></ColumnDefinition>
-                                <ColumnDefinition Width="19"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <Grid Grid.Column="1">
                                 <svgc:SvgViewbox Margin="0,0,5,0"  IsHitTestVisible="True" Name="bkIcon" Source="{TemplateBinding Source}"
@@ -61,7 +61,9 @@
                                           Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
                                           Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" 
                                           SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                            <Image Grid.Column="3"></Image>
+                            <!--<Image Grid.Column="3"></Image>-->
+                            <local:MusicDanceIcon Grid.Column="3" VerticalAlignment="Center" Height="14" Width="16" Visibility="Hidden"></local:MusicDanceIcon>
+                            <!--<local:DownloadingDanceIcon Grid.Column="3" VerticalAlignment="Center" Height="14" Width="16" Visibility="Hidden"></local:DownloadingDanceIcon>-->
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>

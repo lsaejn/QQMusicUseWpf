@@ -1,0 +1,86 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:local="clr-namespace:PlayerControl" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="{x:Type local:MusicDanceIcon}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:MusicDanceIcon}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="DanceEffect">
+                            <!--<DoubleAnimation BeginTime="0:0:0" Storyboard.TargetName="ele1"
+                                                           Storyboard.TargetProperty="Height"
+                                                           RepeatBehavior="Forever" From="0" To="10" Duration="0:0:2">
+                            </DoubleAnimation>-->
+                            <DoubleAnimationUsingKeyFrames BeginTime="0:0:0" Storyboard.TargetName="ele1"
+                                                           Storyboard.TargetProperty="Height"
+                                                           RepeatBehavior="Forever">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="0.0" />
+                                <SplineDoubleKeyFrame KeyTime="0:0:1" Value="10" KeySpline="0.1,0.5,0.9,0.5" />
+                                <SplineDoubleKeyFrame KeyTime="0:0:2" Value="0" KeySpline="0.1,0.5,0.9,0.5" />
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames BeginTime="0:0:0.4" Storyboard.TargetName="ele2"
+                                                           Storyboard.TargetProperty="Height"
+                                                           RepeatBehavior="Forever">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="0.0" />
+                                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="9" KeySpline="0.1,0.5,0.9,0.5" />
+                                <SplineDoubleKeyFrame KeyTime="0:0:3" Value="0" KeySpline="0.1,0.5,0.9,0.5" />
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames BeginTime="0:0:0.2" Storyboard.TargetName="ele3"
+                                                           Storyboard.TargetProperty="Height"
+                                                           RepeatBehavior="Forever">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="0.0" />
+                                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="11" KeySpline="0.1,0.5,0.9,0.5" />
+                                <SplineDoubleKeyFrame KeyTime="0:0:3" Value="0" KeySpline="0.1,0.5,0.9,0.5" />
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames BeginTime="0:0:0.8" Storyboard.TargetName="ele4"
+                                                           Storyboard.TargetProperty="Height"
+                                                           RepeatBehavior="Forever">
+                                <SplineDoubleKeyFrame KeyTime="0" Value="0.0" />
+                                <SplineDoubleKeyFrame KeyTime="0:0:1.5" Value="8" KeySpline="0.1,0.5,0.9,0.5" />
+                                <SplineDoubleKeyFrame KeyTime="0:0:3" Value="0" KeySpline="0.1,0.5,0.9,0.5" />
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </ControlTemplate.Resources>
+
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid Height="{TemplateBinding Height}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Rectangle VerticalAlignment="Bottom" Name="ele1" Grid.Column="0"  Margin="1"  Fill="#FF1FD0A3"></Rectangle>
+                            <Rectangle VerticalAlignment="Bottom" Name="ele2" Grid.Column="1"   Margin="1" Fill="#FF1FD0A3"></Rectangle>
+                            <Rectangle VerticalAlignment="Bottom" Name="ele3" Grid.Column="2"  Margin="1" Fill="#FF1FD0A3"></Rectangle>
+                            <Rectangle VerticalAlignment="Bottom" Name="ele4" Grid.Column="3"  Margin="1" Fill="#FF1FD0A3"></Rectangle>
+                        </Grid>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <!--<EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard Storyboard="{StaticResource DanceEffect}">
+                            </BeginStoryboard>
+                        </EventTrigger>-->
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsVisible" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource DanceEffect}"/>
+                            </MultiTrigger.EnterActions>
+                        </MultiTrigger>
+                        <!--<BeginStoryboard Storyboard="{StaticResource DanceEffect}" Name="IsRingCircularProgressBarStoryboard"/>-->
+
+
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

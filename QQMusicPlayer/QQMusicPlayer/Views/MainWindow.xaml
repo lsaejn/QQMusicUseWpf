@@ -29,6 +29,8 @@
         <conv:StretcherConverter x:Key="stretcherConverter"/>
         <conv:ReverseBooleanConverter x:Key="reverseBooleanConverter"/>
         <conv:MusicProgressConverter x:Key="progressConverter"/>
+        <sys:String x:Key="MyFile">/images/leftArrowNormal.svg</sys:String>
+        <conv:UriConverter x:Key="UriConverter"/>
     </Window.Resources>
 
     <Border BorderThickness="0,0,5,0" BorderBrush="#FFF6f6f6">
@@ -136,7 +138,7 @@
                                 <svgc:SvgViewbox.Style>
                                     <Style TargetType="svgc:SvgViewbox">
                                         <Style.Setters>
-                                            <Setter Property="Source" Value="pack://application:,,,/images/leftArrowNormal.svg"/>
+                                            <Setter Property="Source" Value="{Binding Source={StaticResource MyFile}, Converter={StaticResource UriConverter}, Mode=OneWay}"/>
                                         </Style.Setters>
                                         <Style.Triggers>
                                             <Trigger Property="IsEnabled" Value="False">
