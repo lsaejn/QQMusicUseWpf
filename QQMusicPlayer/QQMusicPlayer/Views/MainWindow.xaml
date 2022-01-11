@@ -473,7 +473,7 @@
 
                             <media:MediaElementWrapper x:Name="MediaElement"
                                    LoadedBehavior="Stop" Visibility="Collapsed"             
-                                   ScrubbingEnabled="True"
+                                   ScrubbingEnabled="True" IsPlaying="{Binding PlayingMusic, Mode=OneWayToSource}"
                                    Stretch="None" />
 
                             <PlayerControl:SvgButtonBox Width="18" Height="18" SourceHeight="16" SourceWidth="16" Source="/images/nextBlack.svg" SourceMouseOver="/images/nextGreen.svg" Margin="10,0,10,0"/>

@@ -82,7 +82,7 @@ namespace QQMusicPlayer.Views
                     return;
                 if (this.WindowState == WindowState.Maximized)
                 {
-                    Point pt = Mouse.GetPosition(e.Source as FrameworkElement);
+                    Point pt = Mouse.GetPosition(this);
                     if (pt.Y > 75)
                         return;
 
@@ -99,7 +99,7 @@ namespace QQMusicPlayer.Views
                         this.Left = pt.X - w / 2;
                     this.Top = 0;
                 }
-                Point pp = Mouse.GetPosition(e.Source as FrameworkElement);
+                Point pp = Mouse.GetPosition(this);
                 if (pp.Y < 75)
                     DragMove();
             }
