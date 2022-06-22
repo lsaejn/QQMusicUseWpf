@@ -6,6 +6,7 @@ using Gu.Wpf.Media;
 using System.Windows.Threading;
 using QQMusicPlayer.ViewModels;
 using MediaState = Gu.Wpf.Media.MediaState;
+using QQMusicPlayer.Services;
 
 namespace QQMusicPlayer.Views
 {
@@ -13,10 +14,12 @@ namespace QQMusicPlayer.Views
     //https://docs.microsoft.com/en-us/dotnet/desktop/wpf/app-development/pack-uris-in-wpf?redirectedfrom=MSDN&view=netframeworkdesktop-4.8#Resource_File_Pack_URIs___Local_Assembly
     public partial class MainWindow : Window
     {
-
         public MainWindow()
         {
             InitializeComponent();
+            {
+                WindowHelper.ModifyWindowStyle(this);
+            }
             //SpeechRecognizer speechRecognizer = new SpeechRecognizer();
             var mvm = new MainWindowViewModel();
             mvm.PlayRequested += (sender, e) => {
