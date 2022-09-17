@@ -2,7 +2,8 @@
 # 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
 ################################################################################
 
-/QQMusicPlayer/.vs/QQMusicPlayer/v16
+#/QQMusicPlayer/.vs
+/QQMusicPlayer/.vs/QQMusicPlayer
 /.vs
 /QQMusicPlayer/PlayerControl/obj/Debug
 /QQMusicPlayer/QQMusicPlayer/obj/Debug

@@ -63,6 +63,11 @@ namespace QQMusicPlayer.Services
         }
 
         // Import dwmapi.dll and define DwmSetWindowAttribute in C# corresponding to the native function.
+        /*
+         HRESULT DwmSetWindowAttribute(HWND hwnd, DWORD dwAttribute, [in] LPCVOID pvAttribute,
+            DWORD   cbAttribute);
+         * 
+         */
         [DllImport("dwmapi.dll", CharSet = CharSet.Unicode, SetLastError = true)]
         private static extern long DwmSetWindowAttribute(IntPtr hwnd,
                                                          uint dwAttribute,

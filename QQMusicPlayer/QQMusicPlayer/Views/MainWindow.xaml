@@ -46,7 +46,7 @@
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
+                    <!--<RowDefinition Height="Auto"></RowDefinition>-->
                 </Grid.RowDefinitions>
 
                 <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0,0,0">
@@ -93,15 +93,21 @@
 
                 <StackPanel Grid.Row="3" HorizontalAlignment="Left" Margin="20, 0, 0, 0">
                     <TextBlock Foreground="#808080" Margin="20, 18, 0, 10">创建的歌单</TextBlock>
-                    <PlayerControl:NaviButton Content="纯音乐" SourceVisibility="Collapsed" Margin="0,5" GroupName="Navi" Command="{Binding Navigate}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
-                    <PlayerControl:NaviButton Content="王菲" SourceVisibility="Collapsed" Margin="0,5" GroupName="Navi" Command="{Binding Navigate}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
-                    <PlayerControl:NaviButton Content="周杰伦" SourceVisibility="Collapsed" Margin="0,5" GroupName="Navi" Command="{Binding Navigate}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
-                    <PlayerControl:NaviButton Content="我的最爱" SourceVisibility="Collapsed" Margin="0,5" GroupName="Navi" Command="{Binding Navigate}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+                    <ScrollViewer Style="{DynamicResource ScrollViewerStyle}" Height="150" VerticalScrollBarVisibility="Visible">
+                        <StackPanel>
+                            <PlayerControl:NaviButton Content="纯音乐" SourceVisibility="Collapsed" Margin="0,5" GroupName="Navi" Command="{Binding Navigate}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+                            <PlayerControl:NaviButton Content="王菲" SourceVisibility="Collapsed" Margin="0,5" GroupName="Navi" Command="{Binding Navigate}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+                            <PlayerControl:NaviButton Content="周杰伦" SourceVisibility="Collapsed" Margin="0,5" GroupName="Navi" Command="{Binding Navigate}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+                            <PlayerControl:NaviButton Content="我的最爱" SourceVisibility="Collapsed" Margin="0,5" GroupName="Navi" Command="{Binding Navigate}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+                            <PlayerControl:NaviButton Content="11我的最爱" SourceVisibility="Collapsed" Margin="0,5" GroupName="Navi" Command="{Binding Navigate}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+                        </StackPanel>
+                    </ScrollViewer>
+
                 </StackPanel>
 
-                <StackPanel Grid.Row="4" HorizontalAlignment="Left" Margin="20, 0, 0, 0">
+                <!--<StackPanel Grid.Row="4" HorizontalAlignment="Left" Margin="20, 0, 0, 0">
                     <TextBlock Foreground="#808080" Margin="20, 18, 0, 10">收藏的歌单</TextBlock>
-                </StackPanel>
+                </StackPanel>-->
             </Grid>
 
             <Grid x:Name="RightBoard" Grid.Column="1" Background="#FFF6f6f6" WindowChrome.IsHitTestVisibleInChrome="True">
