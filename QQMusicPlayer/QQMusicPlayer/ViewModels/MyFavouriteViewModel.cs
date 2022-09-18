@@ -8,8 +8,8 @@ namespace QQMusicPlayer.ViewModels
 {
     class MyFavouriteViewModel
     {
-        public ObservableCollection<MusicTest> MusicList { get; set; }
-        public MyFavouriteViewModel(ObservableCollection<MusicTest> musicList)
+        public ObservableCollection<MusicViewModel> MusicList { get; set; }
+        public MyFavouriteViewModel(ObservableCollection<MusicViewModel> musicList)
         {
             MusicList = musicList;
         }

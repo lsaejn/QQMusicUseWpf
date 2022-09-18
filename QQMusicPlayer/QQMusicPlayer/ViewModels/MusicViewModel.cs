@@ -1,15 +1,28 @@
 ﻿using QQMusicPlayer.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net;
 
 namespace QQMusicPlayer.ViewModels
 {
     internal class MusicViewModel
     {
-        private Music _music;
+        private Music _music = new Music();
+
+        public bool IsMylove { get; set; }
+
+        public string MusicMarkString
+        {
+            get
+            {
+                if (IsMylove)
+                    return "/images/favorPink.svg";
+                else
+                    return "/images/likeGray.svg";
+            }
+        }
+
+        public int MusicMark { get; set; }
 
         public string Id
         {
@@ -29,17 +42,35 @@ namespace QQMusicPlayer.ViewModels
                 _music.artist = value;
             }
         }
+
+        public string FirstArtist
+        {
+            get { return Artist[0]; }
+            set { Artist[0] = value; }
+        }
+
         public string Album
         {
             get { return _music.album; }
             set { _music.album = value; }
         }
-        public Uri pic_uri
-        { 
-            get { return _music.pic_uri; } 
+        public Uri Pic_uri
+        {
+            get { return _music.pic_uri; }
             set => _music.pic_uri = value;
         }
-        public System.Drawing.Bitmap cover { get; set; }
+        public System.Drawing.Bitmap Cover
+        {
+            get
+            {
+                //fix me
+                WebClient wc = new WebClient();
+                //Byte[] pageData = wc.DownloadData(Pic_uri);
+                wc.DownloadFileAsync(Pic_uri, @"temp\\Pic_uri");
+                System.Drawing.Bitmap pic = new System.Drawing.Bitmap(@"temp\\Pic_uri");
+                return pic;
+            }
+        }
         public string url
         {
             get { return _music.url; }

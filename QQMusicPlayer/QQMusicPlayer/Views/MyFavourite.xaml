@@ -144,7 +144,7 @@
                                                     </Style>
                                                 </svgc:SvgViewbox.Style>
                                             </svgc:SvgViewbox>
-                                            <TextBlock Margin="5,0" Text="{Binding Path=Name1}"></TextBlock>
+                                            <TextBlock Margin="5,0" Text="{Binding Path=Name}"></TextBlock>
                                         </StackPanel>
                                         <StackPanel>
                                             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
@@ -159,10 +159,10 @@
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
                         <GridViewColumn x:Name="artists" Header="歌手" 
-                                            DisplayMemberBinding="{Binding Path=Name2}"
+                                            DisplayMemberBinding="{Binding Path=FirstArtist}"
                                             Width="{Binding ElementName=col2, Path=ActualWidth}"/>
                         <GridViewColumn x:Name="album" Header="专辑" 
-                                            DisplayMemberBinding="{Binding Path=Name3}"
+                                            DisplayMemberBinding="{Binding Path=Album}"
                                             Width="{Binding ElementName=col3, Path=ActualWidth}"/>
                     </GridView>
                 </ListView.View>

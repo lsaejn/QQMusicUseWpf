@@ -127,7 +127,7 @@
                                             </Style>
                                         </svgc:SvgViewbox.Style>
                                     </svgc:SvgViewbox>
-                                    <TextBlock Margin="5,0" Text="{Binding Path=Name1}"></TextBlock>
+                                    <TextBlock Margin="5,0" Text="{Binding Path=Name}"></TextBlock>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
