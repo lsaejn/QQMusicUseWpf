@@ -21,12 +21,12 @@ namespace QQMusicPlayer.Models
     //meting不提供时长
     class Music
     {
+        public SearchedSong searchedSongInfo { get; set; }
         public string id { get; set; }
         public string name { get; set; }
         public List<string> artist { get; set; }
         public string album { get; set; }
         public Uri pic_uri { get; set; }
-        public System.Drawing.Bitmap cover { get; set; }
         public string url { get; set; }
         public string localPath { get; set; }
         public string lyric { get; set; }

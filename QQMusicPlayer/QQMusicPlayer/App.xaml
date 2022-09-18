@@ -14,7 +14,7 @@
                 <ResourceDictionary Source="/styles/MusicPlayButton.xaml"/>
                 <ResourceDictionary Source="/Styles/MyMusicScrollViewer.xaml"/>
 
-                <!--<ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />-->
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

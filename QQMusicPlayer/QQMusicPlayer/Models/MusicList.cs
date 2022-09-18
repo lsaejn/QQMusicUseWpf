@@ -9,6 +9,7 @@ namespace QQMusicPlayer.Models
 {
     class MusicList
     {
-        public ObservableCollection<Music> musicList = new ObservableCollection<Music>();
+        public string name { get; set; }
+        public List<Music> musicList { get; set; } = new List<Music>();
     }
 }
