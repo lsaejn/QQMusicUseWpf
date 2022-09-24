@@ -30,7 +30,7 @@ namespace QQMusicPlayer.Models
      *歌单类型MusicListInfo name type(除了本地，都是2) annotation  某个歌单的信息，所有用户
      *歌单内容MusicList music_id(不使用外键) 某个歌单的音乐id列表 
      *用户信息 userid username pass 
-     *用户歌单 userid MusicList-id
+     *用户歌单  MusicList-id userid
      *
      *过程: 登录 查用户信息 ->获取用户歌单(初始化各个歌单)->歌单内容/歌单类型->音乐信息 
      */
