@@ -131,10 +131,8 @@
                                                         <Style.Triggers>
                                                             <MultiDataTrigger>
                                                                 <MultiDataTrigger.Conditions>
-
                                                                     <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsMouseOver}" Value="True" />
                                                                     <Condition Binding="{Binding Path=IsMylove}" Value="False" />
-
                                                                 </MultiDataTrigger.Conditions>
                                                                 <MultiDataTrigger.Setters >
                                                                     <Setter Property="Source" Value="/images/likePinkRed.svg"/>
@@ -153,7 +151,6 @@
                                                 <TextBlock>aaa</TextBlock>
                                             </StackPanel>
                                         </StackPanel>
-
                                     </Grid>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>

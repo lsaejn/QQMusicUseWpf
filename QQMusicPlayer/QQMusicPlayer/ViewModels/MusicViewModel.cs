@@ -1,13 +1,48 @@
 ﻿using QQMusicPlayer.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Net;
 
 namespace QQMusicPlayer.ViewModels
 {
+    class MusicContextMenu
+    {
+        public MusicContextMenu(string name)
+        {
+            Name = name;
+        }
+        public string Name { get; set; }
+        public string IconPath { get; set; }
+        public ObservableCollection<MusicContextMenu> Children { get; set; }
+    }
+
     internal class MusicViewModel
     {
         private Music _music = new Music();
+
+        private ObservableCollection<MusicContextMenu> _menuItems =new ObservableCollection<MusicContextMenu>()
+        {
+            new MusicContextMenu("播放"),
+            new MusicContextMenu("我喜欢"),
+            new MusicContextMenu("添加到")
+            {
+                Children =new ObservableCollection<MusicContextMenu>()
+                {
+                    new MusicContextMenu("111"),
+                    new MusicContextMenu("222")
+                }
+            },
+            new MusicContextMenu("删除"),
+            new MusicContextMenu("浏览本地文件")
+        };
+        public ObservableCollection<MusicContextMenu> MenuItems
+        {
+            get
+            {
+                return _menuItems;
+            }
+        }
 
         public bool IsMylove { get; set; }
 

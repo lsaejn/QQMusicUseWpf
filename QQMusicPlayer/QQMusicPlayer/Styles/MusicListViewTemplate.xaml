@@ -88,8 +88,18 @@
         <Setter Property="Padding" Value="3,0,0,0"></Setter>
         <Setter Property="ContextMenu">
             <Setter.Value>
-                <ContextMenu>
-                    <MenuItem Header="fuck"></MenuItem>
+                <ContextMenu ItemsSource="{Binding MenuItems}">
+                    <ContextMenu.ItemTemplate>
+                        <HierarchicalDataTemplate ItemsSource="{Binding Children}">
+                            <Label Content="{Binding Name}"/>
+                        </HierarchicalDataTemplate>
+                    </ContextMenu.ItemTemplate>
+                        <!--<MenuItem Header="播放"></MenuItem>
+                    <MenuItem Header="我喜欢"></MenuItem>
+                    <MenuItem Header="添加到" ItemsSource="{Binding MenuItems}">
+                    </MenuItem>
+                    <MenuItem Header="删除"></MenuItem>
+                    <MenuItem Header="浏览本地文件"></MenuItem>-->
                 </ContextMenu>
             </Setter.Value>
         </Setter>
