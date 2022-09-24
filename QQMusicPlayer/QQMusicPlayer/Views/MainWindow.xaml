@@ -40,7 +40,7 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Grid x:Name="LeftBoard" Grid.Column="0" Background="#F0F0F0">
+            <Grid x:Name="LeftBoard" Grid.Column="0" Background="#F0F0F0" WindowChrome.IsHitTestVisibleInChrome="True">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="78"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
@@ -49,10 +49,13 @@
                     <!--<RowDefinition Height="Auto"></RowDefinition>-->
                 </Grid.RowDefinitions>
 
-                <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0,0,0">
-                    <Image Source="/images/logo.ico" Height="25" Margin="0,0,0,0"></Image>
-                    <TextBlock FontSize="17"  FontFamily="微软雅黑">QQ音乐</TextBlock>
-                </StackPanel>
+                <Grid Grid.Row="0">
+                    <StackPanel  Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0,0,0">
+                        <Image Source="/images/logo.ico" Height="25" Margin="0,0,0,0"></Image>
+                        <TextBlock FontSize="17"  FontFamily="微软雅黑">QQ音乐</TextBlock>
+                    </StackPanel>
+                </Grid>
+
 
                 <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="20, 2, 0, 15">
                     <TextBlock Foreground="#808080" Margin="20, 18, 0, 10">在线音乐</TextBlock>

@@ -1,4 +1,5 @@
-﻿using QQMusicPlayer.Views;
+﻿using QQMusicPlayer.Services;
+using QQMusicPlayer.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,7 +12,12 @@ namespace QQMusicPlayer.ViewModels
         public ObservableCollection<MusicViewModel> MusicList { get; set; }
         public MyFavouriteViewModel(ObservableCollection<MusicViewModel> musicList)
         {
-            MusicList = musicList;
+            if(musicList is null)
+            {
+                MusicList = LocalDatabaseService.ReadMyFavorMusicList();
+            }
+            else
+                MusicList = musicList;
         }
 
     }
