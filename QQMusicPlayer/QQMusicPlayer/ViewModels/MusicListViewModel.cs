@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace QQMusicPlayer.ViewModels
 {
-    internal class UserMusicInfoViewModel
+    internal class MusicListViewModel: ObservableCollection<MusicViewModel>
     {
-        public string UserName { get; set; }
-        public ObservableCollection<MusicListViewModel> MusicLists { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
     }
 }

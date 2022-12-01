@@ -134,10 +134,10 @@
     <Compile Include="Converters\UriConverter.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Music.cs" />
-    <Compile Include="Models\MusicList.cs" />
     <Compile Include="Services\LocalDatabaseService.cs" />
     <Compile Include="Services\WindowHelper.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\MusicListViewModel.cs" />
     <Compile Include="ViewModels\MusicViewModel.cs" />
     <Compile Include="ViewModels\MyFavouriteViewModel.cs" />
     <Compile Include="ViewModels\StackWidgetItem.cs" />

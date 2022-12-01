@@ -19,5 +19,7 @@ namespace QQMusicPlayer.Services
             MusicList.Add(new MusicViewModel { Name = "红豆", FirstArtist = "王菲", Album = "畅游", MusicMark = 3, IsMylove = true });
             return MusicList;
         }
+
+        //public static List<>
     }
 }
